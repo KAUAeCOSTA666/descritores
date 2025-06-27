@@ -3,87 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <title>Descritor 18 - Descritores D18, D20 e D33</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  
   <style>
-    /* Mesma CSS do index.html (pode extrair pra arquivo externo depois) */
+   
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
     }
+
     html, body {
       height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #0a0f25;
-      color: #9b59b6;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #041f2e, #0a4a2f);
+      color: #f3d677;
       text-align: center;
-      padding: 20px;
-    }
-    nav {
-      background-color: #111633;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-    }
-    nav a {
-      color: #9b59b6;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    nav a:hover {
-      background-color: #5e3d7a;
-    }
-    nav a.active {
-      background-color: #9b59b6;
-      color: #0a0f25;
-      cursor: default;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: #9b59b6;
+      padding-top: 80px;
+      line-height: 1.6;
       user-select: none;
     }
+
+   
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #033e3e;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      box-shadow: 0 4px 10px rgba(3, 62, 62, 0.6);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #f3d677;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 0 0 0 #f3d677;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 3px;
+      background: #f3d677;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+    nav a:hover {
+      color: #033e3e;
+      background-color: #f3d677;
+      transform: scale(1.1);
+      box-shadow: 0 0 12px #f3d677;
+    }
+    nav a:hover::after {
+      width: 70%;
+    }
+    nav a.active {
+      background-color: #f3d677;
+      color: #033e3e;
+      cursor: default;
+      box-shadow: 0 0 15px #f3d677;
+    }
+    nav a.active::after {
+      width: 70%;
+      background: #033e3e;
+    }
+
+    
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #f3d677;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #ffd95b;
+      text-shadow: 0 0 4px #a67c00;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #ffeaa7;
+      text-shadow: 0 0 2px #a67c00;
+    }
+
+    
     .texto {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      color: #b291ca;
-      line-height: 1.6;
+      background: rgba(243, 214, 119, 0.15);
+      border: 2px solid #f3d677;
+      border-radius: 20px;
+      padding: 30px 40px;
+      max-width: 720px;
+      margin: 0 auto 60px auto;
+      font-size: 1.3rem;
+      line-height: 1.7;
+      box-shadow: 0 0 20px #f3d677aa;
+      text-align: justify;
       opacity: 0;
       transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
+
     .texto.ativo {
       opacity: 1;
       transform: translateY(0);
     }
+
+    
+    ul {
+      list-style-type: square;
+      margin: 15px 0 30px 30px;
+      max-width: 660px;
+      color: #ffeaa7;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    
+    p strong {
+      color: #ffd95b;
+    }
+
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .texto {
+        font-size: 1.2rem;
+        padding: 25px 30px;
+        max-width: 90%;
+      }
+    }
+
     @media (max-width: 480px) {
       nav {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        padding: 16px 12px;
       }
       nav a {
         font-size: 16px;
-        padding: 6px 12px;
+        padding: 8px 14px;
       }
       h1 {
         font-size: 2rem;
       }
+      h2 {
+        font-size: 1.7rem;
+      }
       .texto {
-        font-size: 1rem;
-        max-width: 90%;
+        font-size: 1.1rem;
+        padding: 20px 20px;
+      }
+      ul {
+        margin-left: 20px;
       }
     }
   </style>
@@ -91,18 +188,49 @@
 <body>
 
   <nav>
-    <a href="index.html">Introdução</a>
-    <a href="d18.html" class="active">Descritor 18</a>
-    <a href="d20.html">Descritor 20</a>
-    <a href="d33.html">Descritor 33</a>
+    <a href="index.html">🏠 Introdução</a>
+    <a href="d18.html" class="active">➕ Descritor 18</a>
+    <a href="d20.html">🥧 Descritor 20</a>
+    <a href="d33.html">🔢 Descritor 33</a>
   </nav>
 
-  <h1 id="titulo">Descritor 18</h1>
+  <h1>🧠 Descritor D18: Resolver problema utilizando as operações fundamentais.</h1>
+  
   <div class="texto" id="texto">
-    <p>Aqui você encontrará informações detalhadas sobre o Descritor 18.</p>
+    <h3>✅ O que significa o D18?</h3>
+    <p>Esse descritor avalia se o estudante é capaz de compreender e resolver problemas matemáticos que envolvem as quatro operações básicas:</p>
+    <ul>
+      <li>Adição (+)</li>
+      <li>Subtração (−)</li>
+      <li>Multiplicação (×)</li>
+      <li>Divisão (÷)</li>
+    </ul>
+
+    <h3>📌 Quando usar o D18?</h3>
+    <p>Use o D18 sempre que o problema:</p>
+    <ul>
+      <li>Apresentar uma situação do dia a dia (compra, venda, quantidade, tempo etc.);</li>
+      <li>Exigir cálculo para encontrar a resposta;</li>
+      <li>Puder ser resolvido com operações matemáticas simples.</li>
+    </ul>
+
+    <h2>🧾 Exemplos resolvidos</h2>
+
+    <h3>🧮 Exemplo 1 – Adição simples:</h3>
+    <p><strong>Enunciado:</strong> João tem 25 figurinhas. Ele ganhou mais 18 de um amigo. Quantas figurinhas João tem agora?</p>
+    <p><strong>25 + 18 = 43 figurinhas</strong></p>
+
+    <h3>➖ Exemplo 2 – Subtração:</h3>
+    <p><strong>Enunciado:</strong> Maria tinha 60 reais. Ela comprou um livro por 35 reais. Quanto sobrou?</p>
+    <p><strong>60 − 35 = 25 reais</strong></p>
+
+    <h3>✖️ Exemplo 3 – Multiplicação:</h3>
+    <p><strong>Enunciado:</strong> Um pacote tem 6 garrafas de água. Quantas garrafas há em 4 pacotes?</p>
+    <p><strong>6 × 4 = 24 garrafas</strong></p>
   </div>
 
   <script>
+    
     function scrollParaCentro(elemento) {
       const rect = elemento.getBoundingClientRect();
       const elemTop = rect.top + window.pageYOffset;
@@ -115,22 +243,20 @@
       });
     }
 
+    
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-
         const href = this.getAttribute('href');
         const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
 
-        if(href === paginaAtual) {
-          const titulo = document.getElementById('titulo');
+        if (href === paginaAtual) {
+          const titulo = document.querySelector('h1');
           const texto = document.getElementById('texto');
-          if(titulo && texto) {
+          if (titulo && texto) {
             scrollParaCentro(titulo);
             texto.classList.remove('ativo');
-            setTimeout(() => {
-              texto.classList.add('ativo');
-            }, 500);
+            setTimeout(() => texto.classList.add('ativo'), 500);
           }
         } else {
           window.location.href = href;
@@ -138,11 +264,10 @@
       });
     });
 
+   
     window.addEventListener('load', () => {
       const texto = document.getElementById('texto');
-      setTimeout(() => {
-        texto.classList.add('ativo');
-      }, 100);
+      setTimeout(() => texto.classList.add('ativo'), 100);
     });
   </script>
 

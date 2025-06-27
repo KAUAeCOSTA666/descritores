@@ -2,88 +2,140 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Descritor 20 - Descritores D18, D20 e D33</title>
   <style>
-    /* Mesmo CSS dos anteriores */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #0a0f25;
-      color: #9b59b6;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a2e57; /* azul marinho 12% mais claro */
+      color: #ffffff;
+      min-height: 100vh;
       text-align: center;
-      padding: 20px;
+      padding: 0 20px 40px;
+      overflow-x: hidden;
     }
+
     nav {
-      background-color: #111633;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #132647dd;
+      padding: 12px 24px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      gap: 25px;
+      box-shadow: 0 0 18px #6eb8ff;
+      border-radius: 0 0 12px 12px;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
     }
+
     nav a {
-      color: #9b59b6;
-      text-decoration: none;
+      color: #ffffff;
       font-weight: bold;
       font-size: 18px;
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.4s ease;
     }
+
     nav a:hover {
-      background-color: #5e3d7a;
+      color: #6eb8ff;
+      background-color: rgba(110, 184, 255, 0.15);
+      box-shadow: 0 0 14px #6eb8ff, 0 0 24px #6eb8ff;
+      transform: scale(1.1);
     }
+
     nav a.active {
-      background-color: #9b59b6;
-      color: #0a0f25;
+      background-color: rgba(110, 184, 255, 0.35);
+      color: #6eb8ff;
+      box-shadow: 0 0 20px #6eb8ff, 0 0 40px #6eb8ff;
       cursor: default;
     }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: #9b59b6;
-      user-select: none;
+      margin-top: 100px;
+      font-size: 3rem;
+      color: #6eb8ff;
+      text-shadow:
+        0 0 8px #6eb8ff,
+        0 0 18px #6eb8ffcc;
     }
+
     .texto {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      color: #b291ca;
-      line-height: 1.6;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      font-size: 1.35rem;
+      line-height: 1.8;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 20px #6eb8ff99, inset 0 0 20px #6eb8ff55;
       opacity: 0;
       transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
+
     .texto.ativo {
       opacity: 1;
       transform: translateY(0);
     }
-    @media (max-width: 480px) {
+
+    h3 {
+      margin-top: 40px;
+      font-size: 2rem;
+      color: #a9d6ff;
+      text-shadow:
+        0 0 7px #a9d6ffcc,
+        0 0 14px #a9d6ff88;
+    }
+
+    ul {
+      text-align: left;
+      margin: 15px auto;
+      padding-left: 25px;
+      max-width: 800px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #d9ebff;
+    }
+
+    ul li {
+      margin-bottom: 14px;
+    }
+
+    p strong {
+      color: #6eb8ff;
+      text-shadow: 0 0 6px #6eb8ff, 0 0 10px #6eb8ff;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.3rem;
+      }
+      .texto {
+        font-size: 1.1rem;
+        padding: 20px;
+      }
       nav {
         flex-direction: column;
         gap: 10px;
       }
       nav a {
         font-size: 16px;
-        padding: 6px 12px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .texto {
-        font-size: 1rem;
-        max-width: 90%;
+        padding: 8px 14px;
       }
     }
   </style>
@@ -97,9 +149,50 @@
     <a href="d33.html">Descritor 33</a>
   </nav>
 
-  <h1 id="titulo">Descritor 20</h1>
+  <h1 id="titulo">🧠 Descritor D20: Resolver problema que envolva o significado e o uso de frações.</h1>
+
   <div class="texto" id="texto">
-    <p>Aqui você encontrará informações detalhadas sobre o Descritor 20.</p>
+
+    <h3>✅ O que o D20 avalia?</h3>
+    <ul>
+      <li>Compreender fração como parte de um todo, ou seja, perceber que 1/2 de um bolo significa dividir igualmente.</li>
+      <li>Entender frações como divisão de números inteiros em partes iguais, como dividir uma barra de chocolate entre amigos.</li>
+      <li>Resolver problemas que envolvam somar ou subtrair frações com denominadores iguais e diferentes.</li>
+      <li>Reconhecer frações equivalentes e saber simplificá-las para facilitar a resolução.</li>
+      <li>Usar frações em contextos reais: receitas, tempo, dinheiro e esportes.</li>
+    </ul>
+
+    <h3>📌 Quando usar o D20?</h3>
+    <ul>
+      <li>Quando o problema pedir para dividir algo igualmente entre pessoas, grupos ou objetos.</li>
+      <li>Ao interpretar gráficos de pizza ou diagramas fracionários.</li>
+      <li>Quando for necessário comparar partes de um todo para decidir quem tem mais ou menos.</li>
+      <li>Quando você encontrar expressões como "metade", "terço", "um quarto", ou frações escritas numericamente.</li>
+      <li>Se o problema envolver combinações de ingredientes ou horários fracionados (ex: 1/2 hora).</li>
+    </ul>
+
+    <h3>🧾 Exemplos resolvidos</h3>
+
+    <h3>🍫 Exemplo 1 – Fração como parte de um todo</h3>
+    <p><strong>Enunciado:</strong> Ana comprou uma pizza com 8 pedaços e comeu 3. Qual fração da pizza ela comeu?</p>
+    <p><strong>Resolução:</strong> 3/8 — ou seja, três partes de um total de oito.</p>
+
+    <h3>⚽ Exemplo 2 – Fração como divisão</h3>
+    <p><strong>Enunciado:</strong> Uma professora dividiu uma barra de chocolate igualmente entre 4 alunos. Qual fração cada um recebeu?</p>
+    <p><strong>Resolução:</strong> 1/4 — cada aluno ficou com uma parte entre as quatro iguais.</p>
+
+    <h3>📘 Exemplo 3 – Comparando frações</h3>
+    <p><strong>Enunciado:</strong> Lúcia leu 2/5 de um livro. Pedro leu 3/5. Quem leu mais?</p>
+    <p><strong>Resolução:</strong> Pedro leu mais, pois 3/5 é maior que 2/5.</p>
+
+    <h3>🎯 Exemplo 4 – Somando frações</h3>
+    <p><strong>Enunciado:</strong> Em uma receita, usa-se 1/4 de xícara de açúcar e 2/4 de xícara de leite. Qual a fração total usada?</p>
+    <p><strong>Resolução:</strong> 1/4 + 2/4 = 3/4 de xícara.</p>
+
+    <h3>💰 Exemplo 5 – Frações no dinheiro</h3>
+    <p><strong>Enunciado:</strong> Pedro gastou 1/2 do dinheiro com jogos e 1/4 com comida. Quanto ele gastou ao todo?</p>
+    <p><strong>Resolução:</strong> 1/2 + 1/4 = 3/4 do total.</p>
+
   </div>
 
   <script>
@@ -118,14 +211,12 @@
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-
         const href = this.getAttribute('href');
         const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
-
-        if(href === paginaAtual) {
+        if (href === paginaAtual) {
           const titulo = document.getElementById('titulo');
           const texto = document.getElementById('texto');
-          if(titulo && texto) {
+          if (titulo && texto) {
             scrollParaCentro(titulo);
             texto.classList.remove('ativo');
             setTimeout(() => {

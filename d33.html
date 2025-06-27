@@ -3,87 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <title>Descritor 33 - Descritores D18, D20 e D33</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Mesmo CSS */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background-color: #0a0f25;
-      color: #9b59b6;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1d1233;
+      color: #f2f2f2;
       text-align: center;
-      padding: 20px;
     }
+
     nav {
-      background-color: #111633;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, #4e2a84, #2d1b4e);
+      padding: 14px 20px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      gap: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+      z-index: 1000;
     }
+
     nav a {
-      color: #9b59b6;
+      color: #d1d1d1;
       text-decoration: none;
       font-weight: bold;
       font-size: 18px;
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      padding: 8px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
     }
+
     nav a:hover {
-      background-color: #5e3d7a;
+      background-color: #6c4bb8;
+      color: white;
     }
+
     nav a.active {
-      background-color: #9b59b6;
-      color: #0a0f25;
-      cursor: default;
+      background-color: #c1b3ff;
+      color: #1d1233;
     }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: #9b59b6;
-      user-select: none;
+      margin-top: 100px;
+      font-size: 2.8rem;
+      color: #d1c1ff;
+      text-shadow: 0 0 14px #a58cff;
     }
+
+    .container {
+      background-color: #291c42;
+      max-width: 850px;
+      margin: 30px auto;
+      border-radius: 18px;
+      padding: 35px;
+      box-shadow: 0 0 18px rgba(200, 180, 255, 0.35);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .texto {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      color: #b291ca;
-      line-height: 1.6;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      font-size: 1.25rem;
+      line-height: 1.75;
+      color: #eee;
     }
-    .texto.ativo {
-      opacity: 1;
-      transform: translateY(0);
+
+    h3 {
+      color: #dabfff;
+      margin-top: 30px;
+      text-shadow: 0 0 10px #b892ff;
     }
-    @media (max-width: 480px) {
+
+    ul {
+      text-align: left;
+      padding-left: 25px;
+      margin: 12px auto;
+      max-width: 90%;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    mark {
+      background-color: #e3d3ff;
+      color: #1d1233;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+        margin-top: 90px;
+      }
+
+      .container {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+
+      .texto {
+        font-size: 1rem;
+      }
+
       nav {
         flex-direction: column;
         gap: 10px;
-      }
-      nav a {
-        font-size: 16px;
-        padding: 6px 12px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .texto {
-        font-size: 1rem;
-        max-width: 90%;
       }
     }
   </style>
@@ -97,9 +135,42 @@
     <a href="d33.html" class="active">Descritor 33</a>
   </nav>
 
-  <h1 id="titulo">Descritor 33</h1>
-  <div class="texto" id="texto">
-    <p>Aqui você encontrará informações detalhadas sobre o Descritor 33.</p>
+  <h1 id="titulo">🧠 Descritor D33: Identificar regularidades em sequências numéricas ou figuras</h1>
+
+  <div class="container texto" id="texto">
+    <h3>✅ O que o D33 avalia?</h3>
+    <p>O descritor D33 avalia se você consegue reconhecer padrões em listas de números ou imagens. Isso ajuda a desenvolver o pensamento lógico e matemático.</p>
+    <ul>
+      <li>Identificar sequências que aumentam, diminuem ou alternam</li>
+      <li>Entender a regra que organiza a sequência</li>
+      <li>Prever o que vem a seguir</li>
+      <li>Relacionar com situações do cotidiano</li>
+    </ul>
+
+    <h3>📌 Quando usar o D33?</h3>
+    <ul>
+      <li>Quando há números organizados logicamente</li>
+      <li>Quando figuras mudam de forma, tamanho ou quantidade</li>
+      <li>Quando é pedido para continuar uma sequência</li>
+      <li>Quando há repetições visuais ou matemáticas</li>
+    </ul>
+
+    <h3>🧾 Exemplos resolvidos</h3>
+
+    <h3>🔢 Exemplo 1 – Adição</h3>
+    <p><strong>Enunciado:</strong> Complete: 4, 7, 10, ___, ___</p>
+    <p><strong>Resolução:</strong> Soma 3 → <mark>13, 16</mark></p>
+
+    <h3>✖️ Exemplo 2 – Multiplicação</h3>
+    <p><strong>Enunciado:</strong> 1, 2, 4, 8, ___, ___</p>
+    <p><strong>Resolução:</strong> Dobra o valor → <mark>16, 32</mark></p>
+
+    <h3>🔺 Exemplo 3 – Figuras</h3>
+    <p><strong>Enunciado:</strong> Um quadrado, dois quadrados... Quantos na figura 6?</p>
+    <p><strong>Resolução:</strong> <mark>6 quadrados</mark></p>
+
+    <h3>💡 Dica Final:</h3>
+    <p>Fique de olho nos padrões escondidos! Eles estão em músicas, jogos, artes e, claro, na matemática. Treine seu olhar e se torne um mestre das sequências! ✨</p>
   </div>
 
   <script>
@@ -109,23 +180,19 @@
       const elemHeight = rect.height;
       const viewportHeight = window.innerHeight;
       const scrollPos = elemTop - (viewportHeight / 2) + (elemHeight / 2);
-      window.scrollTo({
-        top: scrollPos,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: scrollPos, behavior: 'smooth' });
     }
 
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
-
         const href = this.getAttribute('href');
         const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
 
-        if(href === paginaAtual) {
+        if (href === paginaAtual) {
           const titulo = document.getElementById('titulo');
           const texto = document.getElementById('texto');
-          if(titulo && texto) {
+          if (titulo && texto) {
             scrollParaCentro(titulo);
             texto.classList.remove('ativo');
             setTimeout(() => {

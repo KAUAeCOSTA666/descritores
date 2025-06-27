@@ -3,87 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <title>Introdução - Descritores D18, D20 e D33</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* Seu CSS aqui (igual ao que você já fez) */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    
     * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
     html, body {
       height: 100%;
-      font-family: Arial, sans-serif;
-      background: #0a0f25;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #120f3c, #311b92);
+      color: #d1c4e9;
       text-align: center;
-      padding: 20px;
-      color: #9b59b6;
+      padding: 0 20px 40px;
+      overflow-x: hidden;
     }
+
+    /* Menu fixo no topo */
     nav {
-      background: #111633;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #4a148c;
+      padding: 15px 25px;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      width: 100%;
-      max-width: 600px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      gap: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      z-index: 1000;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      user-select: none;
     }
     nav a {
-      color: #9b59b6;
+      color: #d1c4e9;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 18px;
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      padding: 10px 22px;
+      border-radius: 30px;
+      background: rgba(255 255 255 / 0.1);
+      box-shadow: 0 0 0 rgba(255 255 255 / 0);
+      transition: background-color 0.4s, transform 0.3s, box-shadow 0.3s;
     }
     nav a:hover {
-      background-color: #5e3d7a;
+      background-color: #d500f9;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #d500f9;
     }
     nav a.active {
-      background-color: #9b59b6;
-      color: #0a0f25;
+      background-color: #d500f9;
+      box-shadow: 0 0 20px #d500f9;
       cursor: default;
+      transform: scale(1.1);
+    }
+
+    /* Conteúdo principal */
+    body {
+      padding-top: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      color: #9b59b6;
+      font-size: 3rem;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      color: #e1bee7;
+      text-shadow: 0 0 12px #d500f9;
       user-select: none;
     }
     .texto {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      color: #b291ca;
-      line-height: 1.6;
+      max-width: 750px;
+      background: rgba(255 255 255 / 0.07);
+      border-radius: 20px;
+      padding: 30px 40px;
+      font-size: 1.3rem;
+      line-height: 1.7;
+      color: #c1a8e8;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       opacity: 0;
       transform: translateY(40px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      text-align: justify;
+      user-select: text;
     }
     .texto.ativo {
       opacity: 1;
       transform: translateY(0);
     }
-    @media (max-width: 480px) {
+
+    /* Imagem no canto inferior direito */
+    .imagem-canto {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 220px;
+      height: auto;
+      opacity: 0.85;
+      z-index: 10;
+      border-radius: 15px;
+      filter: drop-shadow(0 0 10px #d500f9);
+      cursor: pointer;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      animation: levePulse 4s ease-in-out infinite;
+    }
+    .imagem-canto:hover {
+      transform: scale(1.15) rotate(3deg);
+      opacity: 1;
+      animation-play-state: paused;
+    }
+
+    @keyframes levePulse {
+      0%, 100% { transform: scale(1) rotate(0); }
+      50% { transform: scale(1.05) rotate(-2deg); }
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
       nav {
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px 15px;
       }
       nav a {
         font-size: 16px;
-        padding: 6px 12px;
+        padding: 8px 18px;
       }
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        max-width: 95%;
+        padding: 0 10px;
       }
       .texto {
-        font-size: 1rem;
-        max-width: 90%;
+        font-size: 1.1rem;
+        max-width: 95%;
+        padding: 25px 20px;
+      }
+      .imagem-canto {
+        width: 140px;
+        bottom: 15px;
+        right: 15px;
       }
     }
   </style>
@@ -91,19 +154,31 @@
 <body>
 
   <nav>
-    <a href="index.html" class="active">Introdução</a>
-    <a href="d18.html">Descritor 18</a>
-    <a href="d20.html">Descritor 20</a>
-    <a href="d33.html">Descritor 33</a>
+    <a href="index.html" class="active">🏠 Introdução</a>
+    <a href="d18.html">➕ Descritor 18</a>
+    <a href="d20.html">🥧 Descritor 20</a>
+    <a href="d33.html">🔢 Descritor 33</a>
   </nav>
 
-  <h1 id="titulo">Introdução</h1>
+  <h1 id="titulo">Olá estudantes!</h1>
+
   <div class="texto" id="texto">
-    <p>Bem-vindo ao site sobre os descritores D18, D20 e D33. Aqui você encontrará informações detalhadas sobre cada um deles.</p>
+    <p>
+      Hoje vamos iniciar o estudo de três descritores muito importantes para a compreensão de textos: o Descritor 18, o Descritor 20 e o Descritor 33.<br><br>
+
+      Esses descritores fazem parte das habilidades cobradas em avaliações como a Prova Brasil e o Saeb, e são fundamentais para desenvolver a leitura crítica e a interpretação de textos diversos.<br><br>
+
+      Antes de irmos diretamente ao conteúdo de cada um, é importante entender que esses descritores não tratam apenas da leitura literal, mas também da capacidade de interpretar, refletir e reconhecer elementos essenciais dentro de um texto — sejam eles informações explícitas, ideias implícitas ou até mesmo a diferença entre fatos e opiniões.<br><br>
+
+      Ao longo das próximas explicações, vamos ver exemplos práticos e estratégias para identificar o que cada descritor propõe. Vamos aprender não só a ler, mas a compreender com mais profundidade.<br><br>
+
+      Vamos começar?
+    </p>
   </div>
 
+  <img src="2r7ky8x5e4844-Photoroom (1).png" alt="Imagem decorativa" class="imagem-canto" aria-hidden="true" />
+
   <script>
-    // Função para centralizar o elemento na tela
     function scrollParaCentro(elemento) {
       const rect = elemento.getBoundingClientRect();
       const elemTop = rect.top + window.pageYOffset;
@@ -121,29 +196,25 @@
         e.preventDefault();
 
         const href = this.getAttribute('href');
-        const paginaAtual = window.location.pathname.split('/').pop();
+        const paginaAtual = window.location.pathname.split('/').pop() || 'index.html';
 
-        if(href === paginaAtual || (href === 'index.html' && paginaAtual === '')) {
-          // Mesma página: scroll e animação
+        if(href === paginaAtual) {
           const titulo = document.getElementById('titulo');
           const texto = document.getElementById('texto');
 
           if(titulo && texto) {
             scrollParaCentro(titulo);
-
             texto.classList.remove('ativo');
             setTimeout(() => {
               texto.classList.add('ativo');
             }, 500);
           }
         } else {
-          // Navegar para outra página
           window.location.href = href;
         }
       });
     });
 
-    // Animação inicial na carga da página
     window.addEventListener('load', () => {
       const texto = document.getElementById('texto');
       setTimeout(() => {

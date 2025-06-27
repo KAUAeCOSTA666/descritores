@@ -1,0 +1,20 @@
+.texto {
+  max-width: 750px;
+  background: rgba(255 255 255 / 0.07);
+  border-radius: 20px;
+  padding: 30px 40px;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #c1a8e8;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  text-align: justify;
+  user-select: text;
+
+  
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
