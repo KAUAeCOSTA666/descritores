@@ -18,3 +18,8 @@
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
+.video-lado-direito {
+  flex: 1 1 300px;
+  max-width: 100%;
+  margin-top: 40px; 
+}
